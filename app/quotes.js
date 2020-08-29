@@ -12,7 +12,16 @@ const quotes = [
         rus: '“<span class="underlined">rus 1</span> чрезвычайно редко бывают счастливы.”',
         authorLat: '— Hermann Hesse',
         authorRus: '— Герман Гессе'
+    },
+    {
+        ita: '“Le <span class="underlined">persone</span> possono dimenticare ciò che hai detto, le <span class="underlined">persone</span> possono dimenticare ciò che hai fatto, ma le <span class="underlined">persone</span> non dimenticheranno mai come le hai fatte sentire.”',
+        eng: '“<span class="underlined">People</span> will forget what you said, <span class="underlined">people</span> will forget what you did, but <span class="underlined">people</span> will never forget how you made them fill.”',
+        rus: '“<span class="underlined">Люди</span> могут забыть, что вы сказали; могут забыть, что вы сделали, но они никогда не забудут, что вы заставили их почувствовать.”',
+        authorLat: '— Maya Angelou',
+        authorRus: '— Майя Анжелу'
     }
 ];
+
+// <span class="underlined"></span>
 
 export default quotes;
