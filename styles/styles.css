@@ -168,5 +168,20 @@ footer span {
   blockquote p {
     font-size: 1.4rem;
   }
+  blockquote .underlined::after {
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  blockquote h1 {
+    font-size: 1.8rem;
+  }
+  blockquote p {
+    font-size: 1.2rem;
+  }
+  blockquote .underlined::after {
+    height: 7px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

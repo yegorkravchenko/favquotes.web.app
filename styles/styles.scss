@@ -162,5 +162,29 @@ footer {
         p {
             font-size: 1.4rem;
         }
+
+        .underlined {
+            &::after {
+                height: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    blockquote {
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .underlined {
+            &::after {
+                height: 7px;
+            }
+        }
     }
 }
