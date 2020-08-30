@@ -6,10 +6,24 @@ const langBtns = document.querySelectorAll('#lang-change > li');
 const reloadIcon = document.querySelector('i');
 
 if (sessionStorage.getItem('language') === null) {
-    sessionStorage.setItem('language', 'ita')
+    sessionStorage.setItem('language', 'ita');
 }
 
-const randomQuoteIndex = quotes[randomInt(0, quotes.length - 1)];
+// prevent consequent displaying of the same quote
+let randomNum = randomInt(0, quotes.length - 1);
+
+// if (sessionStorage.getItem('randomNum') === null) {
+//     sessionStorage.setItem('randomNum', randomNum);
+// } else if (sessionStorage.getItem('randomNum') === randomNum) {
+//     while (randomNum === sessionStorage.getItem('randomNum')) {
+//         randomNum = randomInt(0, quotes.length);
+//     }
+//     sessionStorage.setItem('randomNum', randomNum);
+// }
+
+console.log(randomNum);
+
+let randomQuoteIndex = quotes[randomNum];
 
 // Random integer in a range
 function randomInt(min, max) {
