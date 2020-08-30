@@ -21,8 +21,6 @@ let randomNum = randomInt(0, quotes.length - 1);
 //     sessionStorage.setItem('randomNum', randomNum);
 // }
 
-console.log(randomNum);
-
 let randomQuoteIndex = quotes[randomNum];
 
 // Random integer in a range
@@ -32,7 +30,7 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Set or change quote according to the selected language
+// Change quote according to the selected language
 function setQuote() {
     switch (sessionStorage.getItem('language')) {
         case 'ita':
@@ -46,6 +44,21 @@ function setQuote() {
         case 'rus':
             quoteText.innerHTML = randomQuoteIndex.rus;
             author.textContent = randomQuoteIndex.authorRus;
+            break;
+    }
+}
+
+// Change the page title according to the selected language
+function setTitle() {
+    switch (sessionStorage.getItem('language')) {
+        case 'ita':
+            document.title = 'FavQuotes: citazioni random';
+            break;
+        case 'eng':
+            document.title = 'FavQuotes: random quotes';
+            break;
+        case 'rus':
+            document.title = 'FavQuotes: случайные цитаты';
             break;
     }
 }
@@ -69,6 +82,7 @@ langBtns.forEach(btn => btn.addEventListener('click', () => {
     sessionStorage.setItem('language', btn.textContent.toLowerCase());
 
     setQuote();
+    setTitle();
 }));
 
 // Reload page by clicking reload icon
@@ -81,6 +95,7 @@ reloadIcon.addEventListener('click', () => {
 // Set active language button chosen before the reload
 window.addEventListener('load', () => {
     setQuote();
+    setTitle();
     reloadIconAnimation();
 
     let activeLang = Object.values(langBtns).filter(item => item.textContent.toLowerCase() === sessionStorage.getItem('language'))[0];
