@@ -109,6 +109,7 @@ i:hover {
 }
 
 blockquote {
+  margin: 40px 0;
   max-width: 1040px;
   width: 60%;
 }
