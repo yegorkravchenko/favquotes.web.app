@@ -34,15 +34,15 @@ function randomInt(min, max) {
 function setQuote() {
     switch (sessionStorage.getItem('language')) {
         case 'ita':
-            quoteText.innerHTML = randomQuoteIndex.ita;
+            quoteText.innerHTML = setSpan(randomQuoteIndex.ita, randomQuoteIndex.underlinedIta);
             author.textContent = randomQuoteIndex.authorIta;
             break;
         case 'eng':
-            quoteText.innerHTML = randomQuoteIndex.eng;
+            quoteText.innerHTML = setSpan(randomQuoteIndex.eng, randomQuoteIndex.underlinedEng);
             author.textContent = randomQuoteIndex.authorEng;
             break;
         case 'rus':
-            quoteText.innerHTML = randomQuoteIndex.rus;
+            quoteText.innerHTML = setSpan(randomQuoteIndex.rus, randomQuoteIndex.underlinedRus);
             author.textContent = randomQuoteIndex.authorRus;
             break;
     }
@@ -71,6 +71,12 @@ function reloadIconAnimation() {
     ];
     
     reloadIcon.animate(rotate360, { duration: 350 });
+}
+
+// Adds span with underlined class to selected words in a quote
+function setSpan(string, wordsArr) {
+    wordsArr.forEach(word => string = string.replace(word, `<span class="underlined">${word}</span>`));
+    return string;
 }
 
 // Change active language buttons
