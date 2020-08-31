@@ -1,3 +1,3 @@
-# my-fav-quotes
+# favquotes.web.app
 
 work in progress...
