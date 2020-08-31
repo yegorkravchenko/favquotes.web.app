@@ -113,6 +113,7 @@ blockquote {
 
 .underlined {
     position: relative;
+    white-space: nowrap;
 
     &::after {
         content: '';
@@ -174,7 +175,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
     blockquote {
         h1 {
             font-size: 1.8rem;
