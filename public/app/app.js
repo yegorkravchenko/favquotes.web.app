@@ -12,14 +12,7 @@ if (sessionStorage.getItem('language') === null) {
 // prevent consequent displaying of the same quote
 let randomNum = randomInt(0, quotes.length - 1);
 
-// if (sessionStorage.getItem('randomNum') === null) {
-//     sessionStorage.setItem('randomNum', randomNum);
-// } else if (sessionStorage.getItem('randomNum') === randomNum) {
-//     while (randomNum === sessionStorage.getItem('randomNum')) {
-//         randomNum = randomInt(0, quotes.length);
-//     }
-//     sessionStorage.setItem('randomNum', randomNum);
-// }
+// TODO: prevent consequent displaying of the same quote
 
 let randomQuoteIndex = quotes[randomNum];
 
