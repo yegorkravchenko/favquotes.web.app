@@ -47,6 +47,42 @@ const quotes = [
         authorEng: '— Maya Angelou',
         authorRus: '— Майя Анжелу'
     },
+    {
+        id: 4,
+        ita: '“Quello che cerchi, non sono mai i soldi. Quello che cerchi è quello che credi di poter ottenere con i soldi.”',
+        underlinedIta: ['non sono mai i soldi'],
+        eng: '“What you are looking for is never money. What you are looking for is what you think you can achieve with money.”',
+        underlinedEng: ['is never money'],
+        rus: '“Вы никогда не ищете деньги. Вы ищете то, что, по вашему мнению, можно достичь с помощью денег.”',
+        underlinedRus: ['не ищете деньги'],
+        authorIta: '— Anthony Robbins',
+        authorEng: '— Anthony Robbins',
+        authorRus: '— Энтони Роббинс'
+    },
+    {
+        id: 5,
+        ita: '“Il problema è che, quando si tratta di soldi, tutti hanno un\'opinione. Tutti hanno un suggerimento o una risposta da dare. Ma attenzione: raramente sono davvero di aiuto.”',
+        underlinedIta: ['soldi', 'un\'opinione', 'un suggerimento', 'una risposta'],
+        eng: '“The problem is that everyone has an opinion when it comes to money. Everyone has a suggestion or an answer to make. But beware: they are rarely really helpful.”',
+        underlinedEng: ['an opinion', 'money', 'a suggestion', 'an answer'],
+        rus: '“Проблема в том, что у каждого есть свое мнение о деньгах. У каждого есть предложение или ответ. Но будьте осторожны: они редко действительно помогают.”',
+        underlinedRus: ['мнение', 'предложение', 'ответ'],
+        authorIta: '— Anthony Robbins',
+        authorEng: '— Anthony Robbins',
+        authorRus: '— Энтони Роббинс'
+    },
+    {
+        id: 6,
+        ita: '“Il segreto per essere primi è partire.”',
+        underlinedIta: ['essere primi', 'partire'],
+        eng: '“The secret to being first is to begin.”',
+        underlinedEng: ['being first', 'to begin'],
+        rus: '“Секрет быть первым — приступить к работе.”',
+        underlinedRus: ['Секрет', 'приступить к работе'],
+        authorIta: '— Mark Twain',
+        authorEng: '— Mark Twain',
+        authorRus: '— Марк Твен'
+    },
 ];
 
 // <span class="underlined"></span>
