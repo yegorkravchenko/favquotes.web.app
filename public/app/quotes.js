@@ -38,9 +38,9 @@ const quotes = [
     {
         id: 3,
         ita: '“Le persone possono dimenticare ciò che hai detto, le persone possono dimenticare ciò che hai fatto, ma le persone non dimenticheranno mai come le hai fatte sentire.”',
-        underlinedIta: ['Le persone', 'le persone', 'le persone'],
+        underlinedIta: ['Le persone', 'le persone'],
         eng: '“People will forget what you said, people will forget what you did, but people will never forget how you made them fill.”',
-        underlinedEng: ['People', 'people', 'people'],
+        underlinedEng: ['People', 'people'],
         rus: '“Люди могут забыть, что вы сказали; могут забыть, что вы сделали, но они никогда не забудут, что вы заставили их почувствовать.”',
         underlinedRus: ['Люди'],
         authorIta: '— Maya Angelou',

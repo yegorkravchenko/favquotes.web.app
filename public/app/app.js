@@ -27,15 +27,15 @@ function randomInt(min, max) {
 function setQuote() {
     switch (sessionStorage.getItem('language')) {
         case 'ita':
-            quoteText.innerHTML = setSpan(randomQuoteIndex.ita, randomQuoteIndex.underlinedIta);
+            quoteText.innerHTML = addSpan(randomQuoteIndex.ita, randomQuoteIndex.underlinedIta);
             author.textContent = randomQuoteIndex.authorIta;
             break;
         case 'eng':
-            quoteText.innerHTML = setSpan(randomQuoteIndex.eng, randomQuoteIndex.underlinedEng);
+            quoteText.innerHTML = addSpan(randomQuoteIndex.eng, randomQuoteIndex.underlinedEng);
             author.textContent = randomQuoteIndex.authorEng;
             break;
         case 'rus':
-            quoteText.innerHTML = setSpan(randomQuoteIndex.rus, randomQuoteIndex.underlinedRus);
+            quoteText.innerHTML = addSpan(randomQuoteIndex.rus, randomQuoteIndex.underlinedRus);
             author.textContent = randomQuoteIndex.authorRus;
             break;
     }
@@ -67,8 +67,11 @@ function reloadIconAnimation() {
 }
 
 // Adds span with underlined class to selected words in a quote
-function setSpan(string, wordsArr) {
-    wordsArr.forEach(word => string = string.replace(word, `<span class="underlined">${word}</span>`));
+function addSpan(string, wordsArr) {
+    wordsArr.forEach(word => {
+        const regEx = new RegExp(word, 'g');
+        string = string.replace(regEx, `<span class="underlined">${string.match(regEx)[0]}</span>`);
+    });
     return string;
 }
 
